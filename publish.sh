@@ -17,13 +17,16 @@ git checkout gh-pages
 git ls-files | xargs rm -rf
 find * -empty -type d -delete
 
-ls ${TEMP}
 mv ${TEMP}/* .
 rm -rf $TEMP
 
 rm -rf public || true
-git add -A .
-git commit -m "$MESSAGE" || exit 2
+if [[ "$(git diff --name-only)" != "" ]]; then
+    git add -A .
+    git commit -m "$MESSAGE" || exit 2
+else
+    echo "no changes to commit"
+fi
 
 # restore to master
 git checkout master
