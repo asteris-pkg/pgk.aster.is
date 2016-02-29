@@ -7,7 +7,7 @@ if [[ "$(git status --porcelain)" != "" ]]; then
 fi
 
 TEMP=$(mktemp -d -t pkg.asteri.is.XXXX)
-hugo -d $@
+hugo -d $TEMP
 MESSAGE="$(git show --abbrev-commit --oneline --no-patch) (update from master content)"
 
 # move to gh-pages to place content
