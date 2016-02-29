@@ -1,0 +1,15 @@
+baseurl: "https://pkg.aster.is"
+languageCode: "en-us"
+title: "Asteris Packaging"
+theme: rocketeer
+
+SectionPagesMenu: main
+menu:
+  main:
+    - name: "ACIs"
+      identifier: "aci"
+      url: "/aci/"
+
+params:
+  aci:
+    prefix_match: "pkg.aster.is"

@@ -1,0 +1,9 @@
+{{partial "wholeheader.html" .}}
+
+<ul>
+{{range .Data.Pages}}
+    <li>{{.}}</li>
+{{end}}
+</ul>
+
+{{partial "footer.html" .}}

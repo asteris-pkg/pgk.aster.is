@@ -1,0 +1,9 @@
+{{partial "wholeheader.html" .}}
+
+<ul>
+    {{range .Data.Pages}}
+    <li><a href="{{.Permalink}}">{{.Title}}</a> (<a href="{{.Permalink}}">{{.Permalink}}</a>)</li>
+    {{end}}
+</ul>
+
+{{partial "footer.html" .}}
