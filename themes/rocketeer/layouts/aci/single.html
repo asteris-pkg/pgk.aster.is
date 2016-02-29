@@ -1,5 +1,5 @@
 {{partial "headerstart.html" .}}
-<meta name="ac-discovery" content="{{.Site.Params.aci.prefix_match}} https://github.com/{{.Params.github}}/releases/download/{version}/{name}-{version}-{os}-{arch}.{ext}"/>
+<meta name="ac-discovery" content="{{.Site.Params.aci.prefix_match}}/aci/{{.Title}} https://github.com/{{.Params.github}}/releases/download/{version}/{{.Title}}-{version}-{os}-{arch}.{ext}"/>
 <meta name="ac-discovery-pubkeys" content="{{.Site.Params.aci.prefix_match}} {{.Site.BaseURL}}/pubkeys.gpg"/>
 {{partial "headerend.html" .}}
 
