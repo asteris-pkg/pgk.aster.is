@@ -18,7 +18,7 @@ git ls-files | xargs rm -rf
 find * -empty -type d -delete
 
 mv ${TEMP}/* .
-rmdir $TEMP
+rm -rf $TEMP
 
 git add -A .
 git commit -m "$MESSAGE" || exit 2
