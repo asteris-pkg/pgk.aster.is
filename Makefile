@@ -7,7 +7,6 @@ public: ${DATAS}
 	hugo
 
 publish: public
-	mv public /tmp/pkg.aster.is
-	git co gh-pages
+	./publish.sh
 
 .PHONY=publish
