@@ -17,9 +17,11 @@ git checkout gh-pages
 git ls-files | xargs rm -rf
 find * -empty -type d -delete
 
+ls ${TEMP}
 mv ${TEMP}/* .
 rm -rf $TEMP
 
+rm -rf public || true
 git add -A .
 git commit -m "$MESSAGE" || exit 2
 

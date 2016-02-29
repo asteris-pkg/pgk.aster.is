@@ -6,7 +6,7 @@ data/%.json: download-releases.sh content/aci/%.md
 public: ${DATAS}
 	hugo
 
-publish: public
+publish:
 	./publish.sh
 
 .PHONY=publish
