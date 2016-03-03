@@ -3,8 +3,13 @@
   
   <url>
     <loc>https://pkg.aster.is/</loc>
-    <lastmod>2016-03-03T08:42:53-06:00</lastmod>
+    <lastmod>2016-03-03T14:16:38-06:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pkg.aster.is/aci/maven/</loc>
+    <lastmod>2016-03-03T14:16:38-06:00</lastmod>
   </url>
   
   <url>
