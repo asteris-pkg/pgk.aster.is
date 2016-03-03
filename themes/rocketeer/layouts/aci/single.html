@@ -9,7 +9,7 @@
 
 <p>Get this package by running:</p>
 
-<pre><code>rkt fetch {{.Site.Params.aci.prefix_match}}/aci/{{.Title}}</code></pre>
+<pre><code>rkt fetch {{.Site.Params.aci.prefix_match}}/aci/{{.Title}}:{{partial "latestVersion.txt" .Title}}</code></pre>
 
 <h2>Versions available:</h2>
 {{with $versions := getJSON (printf "data/%s.json" .Title)}}

@@ -1,0 +1,1 @@
+{{range $i, $release := getJSON (printf "data/%s.json" .)}}{{if eq $i 0}}{{$release.name}}{{end}}{{end}}
