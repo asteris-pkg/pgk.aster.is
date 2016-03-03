@@ -1,9 +1,35 @@
-{{partial "wholeheader.html" .}}
+{{partial "headerstart.html" .}}
+<style type="text/css">
+ code {
+     background-color: #EEE;
+     padding: 5px;
+     border-radius: 5px;
+ }
+ td, th {
+     padding: 10px;
+ }
+</style>
+{{partial "headerend.html" .}}
 
-<ul>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Latest Version</th>
+            <th>Last Updated</th>
+            <th>Pull</th>
+        </tr>
+    </thead>
+    <tbody>
     {{range .Data.Pages}}
-    <li><a href="{{.Permalink}}">{{.Title}}</a> (<a href="{{.Permalink}}">{{.Permalink}}</a>)</li>
+        <tr>
+            <td><a href="{{.Permalink}}">{{.Title}}</a></td>
+            <td>{{partial "latestVersion.txt" .Title}}</td>
+            <td>{{.Date.Format "2006-01-02T15:04:05Z07:00"}}</td>
+            <td><code>rkt fetch {{.Site.Params.aci.prefix_match}}/aci/{{.Title}}:{{partial "latestVersion.txt" .Title}}</code></td>
+        </tr>
     {{end}}
-</ul>
+    </tbody>
+</table>
 
 {{partial "footer.html" .}}
